@@ -389,3 +389,172 @@ total += end-start
 print(f'Total (n = 10^7) =  {total*1000:.2f}ms ou {total:.2f}s')
 print('.\n.\n.\n')
 total_oln += total
+
+
+
+# BUSCA BINÁRIA
+# n = 10^4
+total_bn = 0
+total = 0
+print("BUSCA BINÁRIA:\n\nn = 10^4\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    BinarySearch(n4, len(n4), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    BinarySearch(n4, len(n4), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    BinarySearch(n4, len(n4), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    BinarySearch(n4, len(n4), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^4) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n')
+total_bn += total
+
+# n = 10^5
+total = 0
+print("\nn = 10^5\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    BinarySearch(n5, len(n5), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    BinarySearch(n5, len(n5), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    BinarySearch(n5, len(n5), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    BinarySearch(n5, len(n5), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^5) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n')
+total_bn += total
+
+# n = 10^6
+total = 0
+print("\nn = 10^6\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    BinarySearch(n6, len(n6), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    BinarySearch(n6, len(n6), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    BinarySearch(n6, len(n6), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    BinarySearch(n6, len(n6), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^6) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n')
+total_bn += total
+
+# n = 10^7
+total = 0
+print("\nn = 10^7\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    BinarySearch(n7, len(n7), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    BinarySearch(n7, len(n7), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    BinarySearch(n7, len(n7), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    BinarySearch(n7, len(n7), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^7) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n.\n.\n')
+total_bn += total
+
+print(f'''BENCHMARKS FINAIS:
+            -Busca Sequencial: {total_ln:.2f}ms ou {total_ln*1000:.2f}s
+            -Busca Sequencial Otimizada: {total_oln:.2f}ms ou {total_oln*1000:.2f}s
+            -Busca Binária: {total_bn:.2f}ms ou {total_bn*1000:.2f}s''')
