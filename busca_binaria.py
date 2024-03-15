@@ -67,6 +67,7 @@ q5 = list(set(random.sample(range(10**7), 10**5)))
 
 # BUSCA SEQUENCIAL
 # n = 10^4
+total_ln = 0
 total = 0
 print("BUSCA SEQUENCIAL:\n\nn = 10^4\n")
 
@@ -104,6 +105,7 @@ total += end-start
 
 print(f'Total (n = 10^4) =  {total*1000:.2f}ms ou {total:.2f}s')
 print('.\n')
+total_ln += total
 
 # n = 10^5
 total = 0
@@ -143,6 +145,7 @@ total += end-start
 
 print(f'Total (n = 10^5) =  {total*1000:.2f}ms ou {total:.2f}s')
 print('.\n')
+total_ln += total
 
 # n = 10^6
 total = 0
@@ -182,6 +185,7 @@ total += end-start
 
 print(f'Total (n = 10^6) =  {total*1000:.2f}ms ou {total:.2f}s')
 print('.\n')
+total_ln += total
 
 # n = 10^7
 total = 0
@@ -220,4 +224,168 @@ print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
 
 print(f'Total (n = 10^7) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n.\n.\n')
+total_ln += total
+
+
+# BUSCA SEQUENCIAL OTIMIZADA
+# n = 10^4
+total_oln = 0
+total = 0
+print("BUSCA SEQUENCIAL OTIMIZADA:\n\nn = 10^4\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    OptimizedLinearSearch(n4, len(n4), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    OptimizedLinearSearch(n4, len(n4), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    OptimizedLinearSearch(n4, len(n4), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    OptimizedLinearSearch(n4, len(n4), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^4) =  {total*1000:.2f}ms ou {total:.2f}s')
 print('.\n')
+total_oln += total
+
+# n = 10^5
+total = 0
+print("\nn = 10^5\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    OptimizedLinearSearch(n5, len(n5), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    OptimizedLinearSearch(n5, len(n5), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    OptimizedLinearSearch(n5, len(n5), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    OptimizedLinearSearch(n5, len(n5), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^5) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n')
+total_oln += total
+
+# n = 10^6
+total = 0
+print("\nn = 10^6\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    OptimizedLinearSearch(n6, len(n6), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    OptimizedLinearSearch(n6, len(n6), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    OptimizedLinearSearch(n6, len(n6), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    OptimizedLinearSearch(n6, len(n6), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^6) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n')
+total_oln += total
+
+# n = 10^7
+total = 0
+print("\nn = 10^7\n")
+
+    # q = 10 ^ 2
+start = timer()
+for i in range(len(q2)):
+    OptimizedLinearSearch(n7, len(n7), q2[i])
+end = timer()
+print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 3
+start = timer()
+for i in range(len(q3)):
+    OptimizedLinearSearch(n7, len(n7), q3[i])
+end = timer()
+print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 4
+start = timer()
+for i in range(len(q4)):
+    OptimizedLinearSearch(n7, len(n7), q4[i])
+end = timer()
+print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+    # q = 10 ^ 5
+start = timer()
+for i in range(len(q5)):
+    OptimizedLinearSearch(n7, len(n7), q5[i])
+end = timer()
+print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
+total += end-start
+
+print(f'Total (n = 10^7) =  {total*1000:.2f}ms ou {total:.2f}s')
+print('.\n.\n.\n')
+total_oln += total
