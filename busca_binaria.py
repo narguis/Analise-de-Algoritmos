@@ -14,10 +14,8 @@ def LinearSearch(array: list[int], size: int, key:int) -> int:
 
 def OptimizedLinearSearch(sorted_array: list[int], size: int, key:int) -> int:
     for i in range(size):
-        if sorted_array[i] == key:
-            return i
-        elif sorted_array[i] > key:
-            break
+        if sorted_array[i] >= key:
+            return i if sorted_array[i] == key else -1
     
     return -1
 
@@ -69,7 +67,7 @@ q5 = list(set(random.sample(range(10**7), 10**5)))
 # n = 10^4
 total_ln = 0
 total = 0
-print("BUSCA SEQUENCIAL:\n\nn = 10^4\n")
+# print("BUSCA SEQUENCIAL:\n\nn = 10^4\n")
 
     # q = 10 ^ 2
 start = timer()
@@ -229,6 +227,13 @@ total_ln += total
 
 
 # BUSCA SEQUENCIAL OTIMIZADA
+
+n4 = sorted(n4)
+n5 = sorted(n5)
+n6 = sorted(n6)
+n7 = sorted(n7)
+
+
 # n = 10^4
 total_oln = 0
 total = 0
@@ -555,6 +560,6 @@ print('.\n.\n.\n')
 total_bn += total
 
 print(f'''BENCHMARKS FINAIS:
-            -Busca Sequencial: {total_ln:.2f}ms ou {total_ln*1000:.2f}s
-            -Busca Sequencial Otimizada: {total_oln:.2f}ms ou {total_oln*1000:.2f}s
-            -Busca Binária: {total_bn:.2f}ms ou {total_bn*1000:.2f}s''')
+            -Busca Sequencial: {total_ln:.2f}s ou {total_ln*1000:.2f}ms
+            -Busca Sequencial Otimizada: {total_oln:.2f}s ou {total_oln*1000:.2f}ms
+            -Busca Binária: {total_bn:.2f}s ou {total_bn*1000:.2f}ms''')
