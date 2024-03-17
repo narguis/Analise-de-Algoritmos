@@ -19,7 +19,7 @@ def OptimizedLinearSearch(sorted_array: list[int], size: int, key:int) -> int:
     
     return -1
 
-def BinarySearch(sorted_array: list[int], high: int, low: int, key: int) -> int:
+def BinarySearch(sorted_array: list[int], low: int, high: int, key: int) -> int:
     if high >= low:
         
         mid = (high + low) // 2
@@ -407,7 +407,7 @@ print("BUSCA BINÁRIA:\n\nn = 10^4\n")
     # q = 10 ^ 2
 start = timer()
 for i in range(len(q2)):
-    BinarySearch(n4, len(n4), q2[i])
+    BinarySearch(n4, 0, len(n4)-1, q2[i])
 end = timer()
 print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -415,7 +415,7 @@ total += end-start
     # q = 10 ^ 3
 start = timer()
 for i in range(len(q3)):
-    BinarySearch(n4, len(n4), q3[i])
+    BinarySearch(n4, 0, len(n4)-1, q3[i])
 end = timer()
 print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -423,7 +423,7 @@ total += end-start
     # q = 10 ^ 4
 start = timer()
 for i in range(len(q4)):
-    BinarySearch(n4, len(n4), q4[i])
+    BinarySearch(n4, 0, len(n4)-1, q4[i])
 end = timer()
 print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -431,7 +431,7 @@ total += end-start
     # q = 10 ^ 5
 start = timer()
 for i in range(len(q5)):
-    BinarySearch(n4, len(n4), q5[i])
+    BinarySearch(n4, 0, len(n4)-1, q5[i])
 end = timer()
 print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -447,7 +447,7 @@ print("\nn = 10^5\n")
     # q = 10 ^ 2
 start = timer()
 for i in range(len(q2)):
-    BinarySearch(n5, len(n5), q2[i])
+    BinarySearch(n5, 0, len(n5)-1, q2[i])
 end = timer()
 print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -455,7 +455,7 @@ total += end-start
     # q = 10 ^ 3
 start = timer()
 for i in range(len(q3)):
-    BinarySearch(n5, len(n5), q3[i])
+    BinarySearch(n5, 0, len(n5)-1, q3[i])
 end = timer()
 print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -463,7 +463,7 @@ total += end-start
     # q = 10 ^ 4
 start = timer()
 for i in range(len(q4)):
-    BinarySearch(n5, len(n5), q4[i])
+    BinarySearch(n5, 0, len(n5)-1, q4[i])
 end = timer()
 print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -471,7 +471,7 @@ total += end-start
     # q = 10 ^ 5
 start = timer()
 for i in range(len(q5)):
-    BinarySearch(n5, len(n5), q5[i])
+    BinarySearch(n5, 0, len(n5)-1, q5[i])
 end = timer()
 print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -487,7 +487,7 @@ print("\nn = 10^6\n")
     # q = 10 ^ 2
 start = timer()
 for i in range(len(q2)):
-    BinarySearch(n6, len(n6), q2[i])
+    BinarySearch(n6, 0, len(n6)-1, q2[i])
 end = timer()
 print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -495,7 +495,7 @@ total += end-start
     # q = 10 ^ 3
 start = timer()
 for i in range(len(q3)):
-    BinarySearch(n6, len(n6), q3[i])
+    BinarySearch(n6, 0, len(n6)-1, q3[i])
 end = timer()
 print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -503,7 +503,7 @@ total += end-start
     # q = 10 ^ 4
 start = timer()
 for i in range(len(q4)):
-    BinarySearch(n6, len(n6), q4[i])
+    BinarySearch(n6, 0, len(n6)-1, q4[i])
 end = timer()
 print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -511,7 +511,7 @@ total += end-start
     # q = 10 ^ 5
 start = timer()
 for i in range(len(q5)):
-    BinarySearch(n6, len(n6), q5[i])
+    BinarySearch(n6, 0, len(n6)-1, q5[i])
 end = timer()
 print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -527,7 +527,7 @@ print("\nn = 10^7\n")
     # q = 10 ^ 2
 start = timer()
 for i in range(len(q2)):
-    BinarySearch(n7, len(n7), q2[i])
+    BinarySearch(n7, 0, len(n7)-1, q2[i])
 end = timer()
 print(f'q = 10^2, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -535,7 +535,7 @@ total += end-start
     # q = 10 ^ 3
 start = timer()
 for i in range(len(q3)):
-    BinarySearch(n7, len(n7), q3[i])
+    BinarySearch(n7, 0, len(n7)-1, q3[i])
 end = timer()
 print(f'q = 10^3, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -543,7 +543,7 @@ total += end-start
     # q = 10 ^ 4
 start = timer()
 for i in range(len(q4)):
-    BinarySearch(n7, len(n7), q4[i])
+    BinarySearch(n7, 0, len(n7)-1, q4[i])
 end = timer()
 print(f'q = 10^4, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
@@ -551,7 +551,7 @@ total += end-start
     # q = 10 ^ 5
 start = timer()
 for i in range(len(q5)):
-    BinarySearch(n7, len(n7), q5[i])
+    BinarySearch(n7, 0, len(n7)-1, q5[i])
 end = timer()
 print(f'q = 10^5, Execução = {(end - start)*1000:.2f}ms\n')
 total += end-start
