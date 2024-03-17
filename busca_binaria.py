@@ -21,21 +21,22 @@ def OptimizedLinearSearch(sorted_array: list[int], size: int, key:int) -> int:
     
     return -1
 
-def BinarySearch(sorted_array: list[int], size: int, key: int) -> int:
-    if size == 0:
-        return -1
+def BinarySearch(sorted_array: list[int], high: int, low: int, key: int) -> int:
+    if high >= low:
+        
+        mid = (high + low) // 2
 
-    mid = floor(size / 2)
-    if sorted_array[mid] == key:
-        return mid
-    elif key < sorted_array[mid]:
-        return BinarySearch(sorted_array[:mid], mid, key)
-    else:
-        result = BinarySearch(sorted_array[mid + 1:], size - mid - 1, key)
-        if result != -1:
-            return mid + 1 + result
+        if sorted_array[mid] == key:
+            return mid
+        
+        elif key < sorted_array[mid]:
+            return BinarySearch(sorted_array, low, mid-1, key)
+        
         else:
-            return -1
+            return BinarySearch(sorted_array, mid+1, high, key)
+        
+    else:
+        return -1
 
 
 # Arrays de N aleatório (elementos não-únicos) - Mais Rápido
