@@ -1,6 +1,5 @@
 from timeit import default_timer as timer
 import random
-from math import floor
 
 
 # Definição das Funções
