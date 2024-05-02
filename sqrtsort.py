@@ -21,9 +21,8 @@ def InsertionSqrtSort(arr):
         partition = arr[i:i+sqrt_n]
         if partition:
             InsertionSort(partition)
-            result += partition  # Merge the sorted partition into result
+            result += partition
 
-    # After sorting and merging all partitions, perform one final sorting step to merge the partitions
     InsertionSort(result)
 
     return result
@@ -62,18 +61,12 @@ def HeapSqrtSort(arr):
         partition = arr[i:i+sqrt_n]
         if partition:
             HeapSort(partition)
-            result += partition  # Merge the sorted partition into result
+            result += partition
 
-    # After sorting and merging all partitions, perform one final sorting step to merge the partitions
     HeapSort(result)
 
     return result
 
-def IsSorted(arr):
-    for i in range(len(arr) - 1):
-        if arr[i] > arr[i + 1]:
-            return False
-    return True
 
 total = 0
 
@@ -86,17 +79,17 @@ total = 0
 
 print(f'CRIANDO OS SETS\n')
 
-start = timer()
 # Sets de N (elementos únicos)
+start = timer()
 n4 = list(set(random.sample(range(10**5), 10**4)))
 n5 = list(set(random.sample(range(10**6), 10**5)))
-# n6 =  list(set(random.sample(range(10**7), 10**6)))
-# n7 = list(set(random.sample(range(10**8), 10**7)))
-# n8 = list(set(random.sample(range(10**9), 10**8)))
+n6 =  list(set(random.sample(range(10**7), 10**6)))
+n7 = list(set(random.sample(range(10**8), 10**7)))
+n8 = list(set(random.sample(range(10**9), 10**8)))
 end = timer()
 total += end - start
 total_set = total
-print(f'Criação dos Sets = {(end - start)*1000:.2f}ms\n')
+print(f'Criação dos Sets = {(total_set)*1000:.2f}ms\n')
 
 # Heap Sort
 
@@ -104,7 +97,7 @@ print(f'HEAP SORT\n')
 
 print("\nn = 10^4\n")
 start = timer()
-sorted_arr = HeapSqrtSort(n4)
+HeapSqrtSort(n4)
 end = timer()
 print(f'Execução = {(end - start)*1000:.2f}ms\n')
 total += end - start
@@ -116,28 +109,30 @@ end = timer()
 print(f'Execução = {(end - start)*1000:.2f}ms\n')
 total += end - start
 
-# print("\nn = 10^6\n")
-# start = timer()
-# HeapSqrtSort(n6)
-# end = timer()
-# print(f'Execução = {(end - start)*1000:.2f}ms\n')
-# total += end - start
+print("\nn = 10^6\n")
+start = timer()
+HeapSqrtSort(n6)
+end = timer()
+print(f'Execução = {(end - start)*1000:.2f}ms\n')
+total += end - start
 
-# print("\nn = 10^7\n")
-# start = timer()
-# HeapSqrtSort(n7)
-# end = timer()
-# print(f'Execução = {(end - start)*1000:.2f}ms\n')
-# total += end - start
+print("\nn = 10^7\n")
+start = timer()
+HeapSqrtSort(n7)
+end = timer()
+print(f'Execução = {(end - start)*1000:.2f}ms\n')
+total += end - start
 
-# print("\nn = 10^8\n")
-# start = timer()
-# HeapSqrtSort(n8)
-# end = timer()
-# print(f'Execução = {(end - start)*1000:.2f}ms\n')
-# total += end - start
+print("\nn = 10^8\n")
+start = timer()
+HeapSqrtSort(n8)
+end = timer()
+print(f'Execução = {(end - start)*1000:.2f}ms\n')
+total += end - start
 
 total_heap = total - total_set
+
+print(f'TEMPO TOTAL HEAP SQRT SORT = {(total_heap)*1000:.2f}ms\n')
 
 # Insertion Sort
 
@@ -150,32 +145,36 @@ end = timer()
 print(f'Execução = {(end - start)*1000:.2f}ms\n')
 total += end - start
 
-# print("\nn = 10^5\n")
-# start = timer()
-# InsertionSqrtSort(n5)
-# end = timer()
-# print(f'Execução = {(end - start)*1000:.2f}ms\n')
-# total += end - start
+print("\nn = 10^5\n")
+start = timer()
+InsertionSqrtSort(n5)
+end = timer()
+print(f'Execução = {(end - start)*1000:.2f}ms\n')
+total += end - start
 
-# print("\nn = 10^6\n")
-# start = timer()
-# InsertionSqrtSort(n6)
-# end = timer()
-# print(f'Execução = {(end - start)*1000:.2f}ms\n')
-# total += end - start
+print("\nn = 10^6\n")
+start = timer()
+InsertionSqrtSort(n6)
+end = timer()
+print(f'Execução = {(end - start)*1000:.2f}ms\n')
+total += end - start
 
-# print("\nn = 10^7\n")
-# start = timer()
-# InsertionSqrtSort(n7)
-# end = timer()
-# print(f'Execução = {(end - start)*1000:.2f}ms\n')
-# total += end - start
+print("\nn = 10^7\n")
+start = timer()
+InsertionSqrtSort(n7)
+end = timer()
+print(f'Execução = {(end - start)*1000:.2f}ms\n')
+total += end - start
 
-# print("\nn = 10^8\n")
-# start = timer()
-# InsertionSqrtSort(n8)
-# end = timer()
-# print(f'Execução = {(end - start)*1000:.2f}ms\n')
-# total += end - start
+print("\nn = 10^8\n")
+start = timer()
+InsertionSqrtSort(n8)
+end = timer()
+print(f'Execução = {(end - start)*1000:.2f}ms\n')
+total += end - start
 
 total_insertion = total - total_heap - total_set
+
+print(f'TEMPO TOTAL INSERTION SQRT SORT = {(total_insertion)*1000:.2f}ms\n\n')
+
+print(f'TEMPO TOTAL DE EXECUÇÃO = {(total)*1000:.2f}ms\n')
