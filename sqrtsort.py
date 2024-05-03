@@ -29,14 +29,14 @@ def InsertionSqrtSort(arr):
 
 def Heapify(arr, n, i):
     largest = i
-    l = 2 * i + 1
-    r = 2 * i + 2
+    left = 2 * i + 1
+    right = 2 * i + 2
 
-    if l < n and arr[l] > arr[largest]:
-        largest = l
+    if left < n and arr[left] > arr[largest]:
+        largest = left
 
-    if r < n and arr[r] > arr[largest]:
-        largest = r
+    if right < n and arr[right] > arr[largest]:
+        largest = right
 
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
@@ -81,11 +81,11 @@ print('CRIANDO OS SETS\n')
 
 # Sets de N (elementos únicos)
 start = timer()
-n4 = list(set(random.sample(range(10**5), 10**4)))
-n5 = list(set(random.sample(range(10**6), 10**5)))
-n6 =  list(set(random.sample(range(10**7), 10**6)))
-n7 = list(set(random.sample(range(10**8), 10**7)))
-n8 = list(set(random.sample(range(10**9), 10**8)))
+n4 = list(set(random.sample(range(10**4), 10**4)))
+n5 = list(set(random.sample(range(10**5), 10**5)))
+n6 =  list(set(random.sample(range(10**6), 10**6)))
+n7 = list(set(random.sample(range(10**7), 10**7)))
+n8 = list(set(random.sample(range(10**8), 10**8)))
 end = timer()
 total += end - start
 total_set = total
